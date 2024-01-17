@@ -72,7 +72,7 @@ class _ClothesState extends State<Clothes> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text(title != null ? 'Editing $title' : 'Add new Clothe'),
+          title: Text(title != null ? 'Editing:\n$title' : 'Add new Clothe'),
           content: SizedBox(
             height: 250,
             width: 200,
@@ -130,12 +130,15 @@ class _ClothesState extends State<Clothes> {
           ),
           actions: [
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green
+              ),
               onPressed: () {
                 setState(() {
                   if (selectedClotheName.isNotEmpty &&
                       selectedClotheColor.isNotEmpty &&
                       selectedClotheSize.isNotEmpty) {
-                    if(index != null) {
+                    if (index != null) {
                       clothes[index] = Clothes(
                         clotheName: selectedClotheName,
                         clotheColor: selectedClotheColor,
@@ -152,7 +155,10 @@ class _ClothesState extends State<Clothes> {
                 });
                 Navigator.of(context).pop();
               },
-              child: Text(index != null ? 'Modify' : 'Add'),
+              child: Text(
+                index != null ? 'Modify' : 'Add',
+                style: const TextStyle(color: Colors.red),
+              ),
             ),
           ],
         );
@@ -178,9 +184,7 @@ class _ClothesState extends State<Clothes> {
       body: Column(
         children: [
           Text(
-            clothes.isEmpty
-                ? 'No added clothes'
-                : 'All Added clothes:',
+            clothes.isEmpty ? 'No Added Clothes' : 'All Added Clothes:',
             style: const TextStyle(
               color: Colors.blue,
               fontSize: 20,
@@ -245,5 +249,4 @@ class _ClothesState extends State<Clothes> {
       ),
     );
   }
-
 }
