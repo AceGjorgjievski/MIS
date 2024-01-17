@@ -47,15 +47,9 @@ class _ClothesState extends State<Clothes> {
 
   //method for adding and editing clothes
   void addClothes({int? index}) {
-    List<String> clothesNames = [
-      'Dress',
-      'Jacket',
-      'Skirt',
-      'T-Shirt',
-      'Blouse'
-    ];
-    List<String> clothesColors = ["Red", "Green", "Blue", "Purple", "Yellow"];
-    List<String> clothesSizes = ["Small", "Medium", "Large"];
+    List<String> clothesNames = ['Dress', 'Jacket', 'Skirt', 'T-Shirt', 'Blouse'];
+    List<String> clothesColors = ['Red', 'Green', 'Blue', 'Purple', 'Yellow'];
+    List<String> clothesSizes = ['Small', 'Medium', 'Large'];
 
     String selectedClotheName =
         index != null ? clothes[index].getClotheName : clothesNames.first;
@@ -130,9 +124,7 @@ class _ClothesState extends State<Clothes> {
           ),
           actions: [
             ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green
-              ),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
               onPressed: () {
                 setState(() {
                   if (selectedClotheName.isNotEmpty &&
