@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "155040566878",
+    "project_id": "mis-exam-schedule",
+    "storage_bucket": "mis-exam-schedule.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155040566878:android:5989a1739124d5d443eecf",
+        "android_client_info": {
+          "package_name": "com.example.exam_schedule"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKyR5TURmKt1EUPKOKozhHcsXcC5Ev8CY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
